@@ -1,0 +1,6 @@
+Working on a new feature:
+
+in your terminal, do git branch and make sure you're on main
+then do git checkout -b
+do git branch again and you should be on your new feature branch
+work on your feature
