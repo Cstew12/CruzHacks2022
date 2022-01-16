@@ -9,12 +9,8 @@ Form {
     padding: 50px 200px;
 }
 
-Form.FormGroup {
-    padding: 50px;
-    border: black;
-
+.question {
+    padding: 20px 0;
 }
 
-.RangeSlider {
-    width: 100%;
-}
+

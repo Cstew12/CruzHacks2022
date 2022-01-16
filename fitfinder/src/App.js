@@ -1,75 +1,171 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
-import React,{useState} from 'react'
+import React, {useState} from 'react'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
 import {Button, Form, FormGroup} from "react-bootstrap";
 import FormRange from "react-bootstrap/FormRange";
+import RangeSlider from "react-bootstrap-range-slider";
 
 function App() {
-    const [selectedDate, setSelectedDate] =useState(null)
+    const [value1, setValue1] = React.useState(20);
+    const [value2, setValue2] = React.useState(50);
+    const [value3, setValue3] = React.useState(100);
+
     return (
         <div className="App">
-            {/*<DatePicker*/}
-            {/*    selected={selectedDate}*/}
-            {/*    onChange={date=> setSelectedDate(date)}*/}
-            {/*    maxDate={new Date()}*/}
-            {/*/>*/}
+
             <div className="Heading">
                 <h1>FitFinder: Find Your Fit</h1>
             </div>
             <Form>
-                <FormGroup>
+                <FormGroup className='question'>
                     <Form.Label>Name</Form.Label>
                     <Form.Control/>
                 </FormGroup>
                 <FormGroup>
                     <Form.Label>Gender</Form.Label>
-                    
+                    <div className="radio">
+                        <label>
+                            <input type="radio" value="option1" checked={true}/>
+                            Man
+                        </label>
+                    </div>
+                    <div className="radio">
+                        <label>
+                            <input type="radio" value="option2"/>
+                            Woman
+                        </label>
+                    </div>
                 </FormGroup>
-                <FormGroup>
-                    <Button class= "btn btn-outline-primary m-1 p-1">Male</Button>
-                    <Button class= "btn btn-outline-primary m-1 p-1">Female</Button>
-                </FormGroup>
-                <FormGroup>
+                <FormGroup className='question'>
                     <Form.Label>Age</Form.Label>
-                    <FormRange></FormRange>
+                    <div>
+                        <RangeSlider
+                            value={value1}
+                            onChange={e => setValue1(e.target.value)}
+                            tooltip='on'
+                            size='lg'
+                            min={5}
+                            max={120}
+                        />
+                    </div>
+
                 </FormGroup>
-                <FormGroup>
-                    <Form.Label>Weight</Form.Label>
-                    <FormRange></FormRange>
+
+
+                <FormGroup className='question'>
+                    <Form.Label>Weight (lbs)</Form.Label>
+                    <div className='RangeSlider'>
+                        <RangeSlider
+                            value={value2}
+                            onChange={e => setValue2(e.target.value)}
+                            tooltip='on'
+                            size='lg'
+                            min={50}
+                            max={500}
+                        />
+                    </div>
                 </FormGroup>
-                <FormGroup>
+                <FormGroup className='question'>
+                    <Form.Label>Height (cm)</Form.Label>
+                    <div className='RangeSlider'>
+                        <RangeSlider
+                            value={value3}
+                            onChange={e => setValue3(e.target.value)}
+                            tooltip='on'
+                            size='lg'
+                            min={60}
+                            max={250}
+                        />
+                    </div>
+                </FormGroup>
+                <FormGroup className='question'>
                     <Form.Label>
                         How often do you exercise currently?
                     </Form.Label>
+                    <div className="radio">
+                        <label>
+                            <input type="radio" value="option1" checked={true}/>
+                            Less than once a month
+                        </label>
+                    </div>
+                    <div className="radio">
+                        <label>
+                            <input type="radio" value="option2"/>
+                            1-3 times a month
+                        </label>
+                    </div>
+                    <div className="radio">
+                        <label>
+                            <input type="radio" value="option3"/>
+                            1-3 times a week
+                        </label>
+                    </div>
+                    <div className="radio">
+                        <label>
+                            <input type="radio" value="option4"/>
+                            4+ times a week
+                        </label>
+                    </div>
+                </FormGroup>
 
-                </FormGroup>
-                <FormGroup>
-                    <Button class= "btn btn-outline-secondary m-1 p-1">Less than once a month</Button>
-                    <Button class= "btn btn-outline-secondary m-1p-1">1-3 times a month</Button>
-                    <Button class= "btn btn-outline-secondary m-1 p-1">1-3 times a week</Button>
-                    <Button class= "btn btn-outline-secondary m-1 p-1">4+ times a week</Button>
-                </FormGroup>
-                <FormGroup>
+                <FormGroup className='question'>
                     <Form.Label>
                         How would you describe yourself?
                     </Form.Label>
 
                 </FormGroup>
                 <FormGroup>
-                    <Button class= "btn btn-outline-secondary m-1 p-1">Beginner</Button>
-                    <Button class= "btn btn-outline-secondary m-1 p-1">intermediate</Button>
-                    <Button class= "btn btn-outline-secondary m-1 p-1">advanced</Button>
-                    
+                    <div className="radio">
+                        <label>
+                            <input type="radio" value="option1" checked={true}/>
+                            Beginner
+                        </label>
+                    </div>
+                    <div className="radio">
+                        <label>
+                            <input type="radio" value="option2"/>
+                            Intermediate
+                        </label>
+                    </div>
+                    <div className="radio">
+                        <label>
+                            <input type="radio" value="option3"/>
+                            Advanced
+                        </label>
+                    </div>
+
                 </FormGroup>
-                <FormGroup>
-                    <Button class= "btn btn-outline-secondary m-4 p-1">Submit</Button>
-                    
+
+                <FormGroup className='question'>
+                    <Form.Label>
+                        What exercise goal do you have?
+                    </Form.Label>
+                    <div className="radio">
+                        <label>
+                            <input type="radio" value="option1" checked={true}/>
+                            I want to lose weight.
+                        </label>
+                    </div>
+                    <div className="radio">
+                        <label>
+                            <input type="radio" value="option2"/>
+                            I want to stay healthy.
+                        </label>
+                    </div>
+                    <div className="radio">
+                        <label>
+                            <input type="radio" value="option3"/>
+                            I want to gain muscle.
+                        </label>
+                    </div>
+
                 </FormGroup>
+                <FormGroup className='question'>
+                    <Button class="btn btn-outline-secondary m-4 p-1">Submit</Button>
 
-
-
+                </FormGroup>
 
             </Form>
         </div>
