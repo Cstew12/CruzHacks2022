@@ -39,10 +39,12 @@ class FirestoreDB {
         }
 
         else {
-            console.log(result.data());
-            return result;
+            const data = await result.data();
+            return data;
         }
     }
 }
 
 module.exports = new FirestoreDB();
+
+
