@@ -39,6 +39,31 @@ function App() {
                     <Form.Label>Weight</Form.Label>
                     <FormRange></FormRange>
                 </FormGroup>
+                <FormGroup>
+                    <Form.Label>
+                        How often do you exercise currently?
+                    </Form.Label>
+
+                </FormGroup>
+                <FormGroup>
+                    <Button class= "btn btn-outline-secondary p-1">Less than once a month</Button>
+                    <Button class= "btn btn-outline-secondary p-1">1-3 times a month</Button>
+                    <Button class= "btn btn-outline-secondary p-1">1-3 times a week</Button>
+                    <Button class= "btn btn-outline-secondary p-1">4+ times a week</Button>
+                </FormGroup>
+                <FormGroup>
+                    <Form.Label>
+                        How would you describe yourself?
+                    </Form.Label>
+
+                </FormGroup>
+                <FormGroup>
+                    <Button class= "btn btn-outline-secondary p-1">Beginner</Button>
+                    <Button class= "btn btn-outline-secondary p-1">intermediate</Button>
+                    <Button class= "btn btn-outline-secondary p-1">advanced</Button>
+                    
+                </FormGroup>
+
 
 
 
