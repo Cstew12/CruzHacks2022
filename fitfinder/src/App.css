@@ -14,3 +14,7 @@ Form.FormGroup {
     border: black;
 
 }
+
+.RangeSlider {
+    width: 100%;
+}
