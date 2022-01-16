@@ -18,4 +18,12 @@ app.post("/Users", (req, res) => {
 	res.send("Recieved!");
 });
 
+// Get endpoint using JSON object.
+app.get("/Users", (req, res) => {
+	const urlParams = new URLSearchParams(req.url); // parse URL.
+	const data = {identifier: urlParams.get('/Users?identifier')};
+	const result = FirestoreDB.get('Users', data);
+	res.send("Recieved!");
+});
+
 app.listen(port, () => console.log(`API listening on port ${port}!`));
