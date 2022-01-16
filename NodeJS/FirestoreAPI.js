@@ -16,6 +16,14 @@ async function getHelper(data, res) {
 	return;
 }
 
+// To handle asynchronous response from network.
+async function deleteHelper(data, res) {
+	const result = await FirestoreDB.delete('Users', data);
+	console.log(result);
+	res.send("Recieved!");
+	return;
+}
+
 app.use(cors());
 
 // Body parser middleware.
@@ -33,13 +41,13 @@ app.post("/Users", (req, res) => {
 app.get("/Users", (req, res) => {
 	const urlParams = new URLSearchParams(req.url); // parse URL.
 	const data = {identifier: urlParams.get('/Users?identifier')};
-	const result = getHelper(data, res);
+	getHelper(data, res);
 });
 
 app.delete("/Users", (req, res) => {
-	const data = req.body;
-	FirestoreDB.delete('Users', data);
-	res.send("Recieved!");
+	const urlParams = new URLSearchParams(req.url); // parse URL.
+	const data = {identifier: urlParams.get('/Users?identifier')};
+	getHelper(data, res)
 })
 
 app.listen(port, () => console.log(`API listening on port ${port}!`));
