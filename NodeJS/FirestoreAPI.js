@@ -1,3 +1,6 @@
+// REST API built using ExpressJS. Serves as an entry
+// point to use the Cloud Firestore for this application.
+
 const express = require("express")
 const app = express();
 const port = 5000;
