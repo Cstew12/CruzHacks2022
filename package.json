@@ -1,0 +1,19 @@
+{
+  "name": "cruzhacks2022",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cstew12/FitFinder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cstew12/FitFinder/issues"
+  },
+  "homepage": "https://github.com/Cstew12/FitFinder#readme"
+}
