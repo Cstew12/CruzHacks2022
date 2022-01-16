@@ -3,7 +3,7 @@ import './App.css'
 import React,{useState} from 'react'
 import DatePicker from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
-import {Form, FormGroup} from "react-bootstrap";
+import {Button, Form, FormGroup} from "react-bootstrap";
 import FormRange from "react-bootstrap/FormRange";
 
 function App() {
@@ -25,7 +25,11 @@ function App() {
                 </FormGroup>
                 <FormGroup>
                     <Form.Label>Gender</Form.Label>
-
+                    
+                </FormGroup>
+                <FormGroup>
+                    <Button class= "btn btn-outline-primary p-1">Male</Button>
+                    <Button class= "btn btn-outline-primary p-1">Female</Button>
                 </FormGroup>
                 <FormGroup>
                     <Form.Label>Age</Form.Label>
