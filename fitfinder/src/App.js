@@ -28,8 +28,8 @@ function App() {
                     
                 </FormGroup>
                 <FormGroup>
-                    <Button class= "btn btn-outline-primary p-1">Male</Button>
-                    <Button class= "btn btn-outline-primary p-1">Female</Button>
+                    <Button class= "btn btn-outline-primary m-1 p-1">Male</Button>
+                    <Button class= "btn btn-outline-primary m-1 p-1">Female</Button>
                 </FormGroup>
                 <FormGroup>
                     <Form.Label>Age</Form.Label>
@@ -46,10 +46,10 @@ function App() {
 
                 </FormGroup>
                 <FormGroup>
-                    <Button class= "btn btn-outline-secondary p-1">Less than once a month</Button>
-                    <Button class= "btn btn-outline-secondary p-1">1-3 times a month</Button>
-                    <Button class= "btn btn-outline-secondary p-1">1-3 times a week</Button>
-                    <Button class= "btn btn-outline-secondary p-1">4+ times a week</Button>
+                    <Button class= "btn btn-outline-secondary m-1 p-1">Less than once a month</Button>
+                    <Button class= "btn btn-outline-secondary m-1p-1">1-3 times a month</Button>
+                    <Button class= "btn btn-outline-secondary m-1 p-1">1-3 times a week</Button>
+                    <Button class= "btn btn-outline-secondary m-1 p-1">4+ times a week</Button>
                 </FormGroup>
                 <FormGroup>
                     <Form.Label>
@@ -58,9 +58,13 @@ function App() {
 
                 </FormGroup>
                 <FormGroup>
-                    <Button class= "btn btn-outline-secondary p-1">Beginner</Button>
-                    <Button class= "btn btn-outline-secondary p-1">intermediate</Button>
-                    <Button class= "btn btn-outline-secondary p-1">advanced</Button>
+                    <Button class= "btn btn-outline-secondary m-1 p-1">Beginner</Button>
+                    <Button class= "btn btn-outline-secondary m-1 p-1">intermediate</Button>
+                    <Button class= "btn btn-outline-secondary m-1 p-1">advanced</Button>
+                    
+                </FormGroup>
+                <FormGroup>
+                    <Button class= "btn btn-outline-secondary m-4 p-1">Submit</Button>
                     
                 </FormGroup>
 
