@@ -1,0 +1,17 @@
+h1 {
+    background-color: #303179;
+    color: white;
+    font-family: Arial, serif;
+    padding: 50px;
+}
+
+Form {
+    padding: 50px 200px;
+}
+
+h2, h4 {
+    padding: 10px 20px;
+}
+
+
+

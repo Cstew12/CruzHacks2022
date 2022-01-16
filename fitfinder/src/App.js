@@ -6,12 +6,13 @@ import 'react-datepicker/dist/react-datepicker.css'
 import {Button, Form, FormGroup} from "react-bootstrap";
 import FormRange from "react-bootstrap/FormRange";
 import RangeSlider from "react-bootstrap-range-slider";
+import {useNavigate} from "react-router-dom";
 
 function App() {
     const [value1, setValue1] = React.useState(20);
     const [value2, setValue2] = React.useState(50);
     const [value3, setValue3] = React.useState(100);
-
+    const navigate = useNavigate();
     return (
         <div className="App">
 
@@ -163,7 +164,7 @@ function App() {
 
                 </FormGroup>
                 <FormGroup className='question'>
-                    <Button class="btn btn-outline-secondary m-4 p-1">Submit</Button>
+                    <Button class="btn btn-outline-secondary m-4 p-1" onClick={() => {navigate("/report")}}>Submit</Button>
 
                 </FormGroup>
 
